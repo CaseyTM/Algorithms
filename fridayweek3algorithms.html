@@ -1,0 +1,39 @@
+<script type="text/javascript">
+
+
+
+function getPrime(n){
+	var prime = [];
+	prime.push(2);
+	var i = 3;
+	while(prime.length < n){
+		var isPrime = true;
+		for(var j = 0; j < prime.length; j++){
+			var iByJ = i %prime[j];
+			if(iByJ == 0){
+				isPrime = false;
+				break;
+			}
+		}
+		if(isPrime){
+			prime.push(i);
+		}
+	}i++
+	return i;
+}
+
+
+console.log(getPrime(10001));
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
